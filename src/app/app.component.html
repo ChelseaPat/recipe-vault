@@ -1,1 +1,26 @@
-<router-outlet></router-outlet>
+<div class="main-div width-100">
+    <div class="top-bar width-100 flex-row content-spread">
+        <div>
+            <img src="../assets/recipe_vault_logo.png" aria-placeholder="boba drink">
+            <!-- logo -->
+        </div>
+        <div>
+            <!-- search -->
+            
+        </div>
+        <div class="flex-row">
+            <div>
+                <!-- add button -->
+                <app-button icon="add" label="Add">
+                </app-button>
+            </div>
+            <div>
+                <app-button icon="notifications"></app-button>
+            </div>
+            <div>
+                <app-button icon="account_circle"></app-button>
+            </div>
+        </div>
+    </div>
+    <router-outlet></router-outlet>
+</div>
