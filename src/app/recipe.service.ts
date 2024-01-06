@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 
 export interface Recipe {
+    id: string,
     title: string,
     description: string,
     ingredients: RecipetIngredient[],
@@ -38,22 +39,23 @@ export class RecipeService {
 
     initialiseDemoRecipes() {
         const recipe1: Recipe = {
+            id: '1',
             title: 'Corn Fritters',
             description: 'Delicious wonderful corn fritters',
             ingredients: [
                 {
-                    amountOfMeasurement: 1.5, 
-                    measurement: 'CUP', 
+                    amountOfMeasurement: 1.5,
+                    measurement: 'CUP',
                     description: 'kernels (fresh, canned or thawed from frozen work equally well)'
                 },
                 {
-                    amountOfMeasurement: 1/2, 
-                    measurement: 'CUP', 
+                    amountOfMeasurement: 1 / 2,
+                    measurement: 'CUP',
                     description: 'plain flour'
                 },
                 {
-                    amountOfMeasurement: 1/2, 
-                    measurement: 'TABLESPOON', 
+                    amountOfMeasurement: 1 / 2,
+                    measurement: 'TABLESPOON',
                     description: 'sugar'
                 }
             ],
@@ -77,6 +79,7 @@ export class RecipeService {
         };
 
         const recipe2: Recipe = {
+            id: '2',
             title: 'B Fritters',
             description: 'Delicious wonderful corn fritters',
             ingredients: [
