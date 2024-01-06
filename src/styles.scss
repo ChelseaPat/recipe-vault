@@ -52,3 +52,18 @@ body {
     display: grid;
     place-items: center;
 }
+
+a:link { 
+    text-decoration: none; 
+    color: #6A5ACD;
+} 
+
+a:visited{
+    text-decoration: none; 
+    color: #6A5ACD;
+}
+
+a:focus { 
+    text-decoration: none; 
+    color:#FF6347; 
+}
