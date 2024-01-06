@@ -1,5 +1,8 @@
 <div class="width-100">
-    <div *ngFor="let recipe of recipes">
-        {{recipe.title}}
+    <div *ngFor="let recipe of recipes" class="recipe-container">
+        <b>{{recipe.title}}</b>
+        <p>
+            {{recipe.description}}
+        </p>
     </div>
 </div>
