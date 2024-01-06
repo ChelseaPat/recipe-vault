@@ -8,13 +8,15 @@ import { RecipeListComponent } from './recipe-list/recipe-list.component';
 import { RecipeService } from './recipe.service';
 import { CommonModule } from '@angular/common';
 import { ButtonComponent } from './common/button/button.component';
+import { RecipeDetailsComponent } from './recipe/recipe-details/recipe-details.component';
 
 @NgModule({
     declarations: [
         AppComponent,
         HomeComponent,
         RecipeListComponent,
-        ButtonComponent
+        ButtonComponent,
+        RecipeDetailsComponent
     ],
     imports: [
         BrowserModule,

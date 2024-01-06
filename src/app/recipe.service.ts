@@ -126,7 +126,12 @@ export class RecipeService {
         };
 
         this.recipes = [...this.recipes, recipe1];
-
         this.recipes = [...this.recipes, recipe2];
+    }
+
+    getRecipeById(id: String): Recipe {
+        const recipe = this.recipes.find(recipe => recipe.id === id) as Recipe;
+        
+        return recipe;
     }
 }
