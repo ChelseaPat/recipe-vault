@@ -7,12 +7,14 @@ import { HomeComponent } from './home/home.component';
 import { RecipeListComponent } from './recipe-list/recipe-list.component';
 import { RecipeService } from './recipe.service';
 import { CommonModule } from '@angular/common';
+import { ButtonComponent } from './common/button/button.component';
 
 @NgModule({
     declarations: [
         AppComponent,
         HomeComponent,
-        RecipeListComponent
+        RecipeListComponent,
+        ButtonComponent
     ],
     imports: [
         BrowserModule,
