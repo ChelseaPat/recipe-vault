@@ -1,1 +1,54 @@
 /* You can add global styles to this file, and also import other style files */
+// Primary Color (Main Accent):
+
+// Tomato Red: #FF6347
+// Secondary Colors:
+
+// Olive Green: #808000
+// Eggplant Purple: #6A5ACD
+// Mustard Yellow: #FFD700
+// Neutral Colors for Background and Text:
+
+// Light Cream: #FFF5E1
+// Charcoal Gray: #333333
+// Accent Color for Calls-to-Action:
+
+// Basil Green: #3CB371
+// Background Color:
+
+// Light Gray: #F5F5F5
+body {
+    background-color: #F5F5F5;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.width-100 {
+    width: 100%;
+}
+
+.flex-growth-1 {
+    flex-grow: 1;
+}
+
+.content-spread {
+    display: flex;
+    justify-content: space-between;
+}
+
+.content-center {
+    display: grid;
+    place-items: center;
+}
