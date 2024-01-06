@@ -14,5 +14,4 @@ export class RecipeListComponent{
 		private recipeService: RecipeService) {
 			this.recipes = this.recipeService.recipes
 		 }
-
 }
