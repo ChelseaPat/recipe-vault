@@ -1,1 +1,18 @@
-<p>{{recipe.title}}</p>
+<div class="width-100 recipe-detail-container">
+    <h2>{{recipe.title}}</h2>
+    <p>{{recipe.description}}</p>
+
+    <b>Ingredients:</b>
+    <ul *ngFor="let ingredient of recipe.ingredients">
+        <li>
+            {{ingredient.amountOfMeasurement + MeasurementLabels[ingredient.measurement] + ' ' + ingredient.description}}
+        </li>
+    </ul>
+
+    <b>Methods:</b>
+    <ng-container *ngFor="let method of recipe.methods; index as i">
+        <p>
+            {{i + 1 + '. ' + method.description}}
+        </p>
+    </ng-container>
+</div>

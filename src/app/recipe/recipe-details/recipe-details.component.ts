@@ -12,6 +12,8 @@ export class RecipeDetailsComponent implements OnInit {
 	id: string = '';
 	recipe: Recipe = null;
 
+	MeasurementLabels = this.recipeService.MeasurementLabels;
+
   	constructor(
 		private route: ActivatedRoute,
 		private recipeService: RecipeService) {}
