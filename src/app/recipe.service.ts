@@ -14,19 +14,11 @@ export interface RecipetIngredient {
     description: string
 }
 
-export interface RecipeMethod{
+export interface RecipeMethod {
     description: string
 }
 
 type RecipeMeasurementType = 'TABLESPOON' | 'TEASPOON' | 'CUP' | 'GRAMS' | 'NONE';
-
-type MeasurementLabels = {
-    TABLESPOON: 'tbp',
-    TEASPOON: 'tsp',
-    CUP: 'cup',
-    GRAMS: 'g',
-    NONE: ''
-};
 
 @Injectable({
     providedIn: 'root'
@@ -38,6 +30,14 @@ export class RecipeService {
     constructor() { 
         this.initialiseDemoRecipes()
     }
+
+    MeasurementLabels = {
+        TABLESPOON: 'tbp',
+        TEASPOON: 'tsp',
+        CUP: 'cup',
+        GRAMS: 'g',
+        NONE: ''
+    };
 
     initialiseDemoRecipes() {
         const recipe1: Recipe = {
