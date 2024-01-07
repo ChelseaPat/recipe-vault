@@ -9,6 +9,7 @@ import { RecipeService } from './recipe.service';
 import { CommonModule } from '@angular/common';
 import { ButtonComponent } from './common/button/button.component';
 import { RecipeDetailsComponent } from './recipe/recipe-details/recipe-details.component';
+import { FieldComponent } from './common/field/field.component';
 
 @NgModule({
     declarations: [
@@ -16,7 +17,8 @@ import { RecipeDetailsComponent } from './recipe/recipe-details/recipe-details.c
         HomeComponent,
         RecipeListComponent,
         ButtonComponent,
-        RecipeDetailsComponent
+        RecipeDetailsComponent,
+        FieldComponent
     ],
     imports: [
         BrowserModule,
