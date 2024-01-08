@@ -1,12 +1,14 @@
 <ng-container *ngIf="fieldType === 'TEXT'">
-    <label [for]="name">{{label}}</label>
-    <input type="text" id="name" [name]="name">
+    
+    <label for="name">{{label}}</label>
+    <input type="text" [id]="name" [name]="name" [(ngModel)]="value" (ngModelChange)="onValueChange()"/>
+    <!-- {{value}} -->
 </ng-container>
 <ng-container *ngIf="fieldType === 'TEXT_AREA'">
-    <label [for]="name">{{label}}</label>
-    <textarea id="name" [name]="name"></textarea>
+    <label for="name">{{label}}</label>
+    <textarea id="name" name="name"></textarea>
 </ng-container>
 <ng-container *ngIf="fieldType === 'NUMBER'">
-    <label [for]="name">{{label}}</label>
+    <label for="name">{{label}}</label>
     <input type="number" id="name" [name]="name">
 </ng-container>

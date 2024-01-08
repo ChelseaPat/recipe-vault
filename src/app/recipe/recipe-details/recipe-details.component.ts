@@ -11,6 +11,7 @@ export class RecipeDetailsComponent implements OnInit {
 
 	id: string = '';
 	recipe: Recipe = null;
+	editMode = false;
 
 	MeasurementLabels = this.recipeService.MeasurementLabels;
 
@@ -21,7 +22,16 @@ export class RecipeDetailsComponent implements OnInit {
   	ngOnInit (): void {
     	this.id = this.route.snapshot.paramMap.get('id');
 		this.recipe = this.recipeService.getRecipeById(this.id);
+
+		this.editMode = this.id === 'new';
   	}
 
+	startEditMode(): void {
+		this.editMode = true;
+	}
+
+	onValueChange(value: string) {
+		console.log('Value changed:', value);
+	  }
 
 }
