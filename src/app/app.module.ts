@@ -10,6 +10,7 @@ import { CommonModule } from '@angular/common';
 import { ButtonComponent } from './common/button/button.component';
 import { RecipeDetailsComponent } from './recipe/recipe-details/recipe-details.component';
 import { FieldComponent } from './common/field/field.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
     declarations: [
@@ -22,8 +23,10 @@ import { FieldComponent } from './common/field/field.component';
     ],
     imports: [
         BrowserModule,
+        FormsModule,
         CommonModule,
-        AppRoutingModule
+        AppRoutingModule,
+        ReactiveFormsModule 
     ],
     providers: [RecipeService],
     bootstrap: [AppComponent]

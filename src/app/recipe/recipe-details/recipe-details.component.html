@@ -1,18 +1,24 @@
-<div class="width-100 recipe-detail-container">
-    <h2>{{recipe.title}}</h2>
-    <p>{{recipe.description}}</p>
+<form> 
+    <div class="width-100 recipe-detail-container">
+        <app-button *ngIf="!editMode" icon="edit" (click)="startEditMode()"></app-button>
+        
+        <h2 *ngIf="!editMode" >{{recipe.title}}</h2>
+        <app-field *ngIf="editMode" fieldType="TEXT" label="Recipe Title" name="title" [(value)]="recipe.title"></app-field>
 
-    <b>Ingredients:</b>
-    <ul *ngFor="let ingredient of recipe.ingredients">
-        <li>
-            {{ingredient.amountOfMeasurement + MeasurementLabels[ingredient.measurement] + ' ' + ingredient.description}}
-        </li>
-    </ul>
+        <p>{{recipe.description}}</p>
 
-    <b>Methods:</b>
-    <ng-container *ngFor="let method of recipe.methods; index as i">
-        <p>
-            {{i + 1 + '. ' + method.description}}
-        </p>
-    </ng-container>
-</div>
+        <b>Ingredients:</b>
+        <ul *ngFor="let ingredient of recipe.ingredients">
+            <li>
+                {{ingredient.amountOfMeasurement + MeasurementLabels[ingredient.measurement] + ' ' + ingredient.description}}
+            </li>
+        </ul>
+
+        <b>Methods:</b>
+        <ng-container *ngFor="let method of recipe.methods; index as i">
+            <p>
+                {{i + 1 + '. ' + method.description}}
+            </p>
+        </ng-container>
+    </div>
+</form>
