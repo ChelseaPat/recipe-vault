@@ -22,6 +22,7 @@ export class FieldComponent implements ControlValueAccessor {
     @Input() label: string;
     @Input() value: any;
     @Output() valueChange: EventEmitter<string> = new EventEmitter<string>();
+    
     disabled = false;
   
     onChange: any = () => { };
@@ -50,19 +51,4 @@ export class FieldComponent implements ControlValueAccessor {
     setDisabledState?(isDisabled: boolean): void {
       this.disabled = isDisabled;
     }
-    // private valueInter: any = null;
-
-    // @Output() valueChange = new EventEmitter<string>();
-
-    // get value(): any {
-    //     return this.valueInter;
-    // }
-    // @Input() set value(value: any) {
-    //     console.log('val', value)
-    //     if(value === this.valueInter){
-    //         return;
-    //     }
-
-    //     this.valueInter = value;
-    // }
 }

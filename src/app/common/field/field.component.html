@@ -1,12 +1,15 @@
 <ng-container *ngIf="fieldType === 'TEXT'">
-    
-    <label for="name">{{label}}</label>
-    <input type="text" [id]="name" [name]="name" [(ngModel)]="value" (ngModelChange)="onValueChange()"/>
+    <div class="flex-column">
+        <label for="name">{{label}}</label>
+        <input type="text" [id]="name" [name]="name" [(ngModel)]="value" (ngModelChange)="onValueChange()"/>
+    </div>
     <!-- {{value}} -->
 </ng-container>
 <ng-container *ngIf="fieldType === 'TEXT_AREA'">
-    <label for="name">{{label}}</label>
-    <textarea id="name" name="name"></textarea>
+    <div class="flex-column">
+        <label for="name">{{label}}</label>
+        <textarea [id]="name" [name]="name" [(ngModel)]="value" (ngModelChange)="onValueChange()"></textarea>
+    </div>
 </ng-container>
 <ng-container *ngIf="fieldType === 'NUMBER'">
     <label for="name">{{label}}</label>

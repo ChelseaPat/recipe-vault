@@ -2,18 +2,38 @@
     <div class="width-100 recipe-detail-container">
         <app-button *ngIf="!editMode" icon="edit" (click)="startEditMode()"></app-button>
         
-        <h2 *ngIf="!editMode" >{{recipe.title}}</h2>
-        <app-field *ngIf="editMode" fieldType="TEXT" label="Recipe Title" name="title" [(value)]="recipe.title"></app-field>
+        <!-- Title -->
+        <div>
+            <h2 *ngIf="!editMode">
+                {{recipe.title}}
+            </h2>
 
-        <p>{{recipe.description}}</p>
+            <app-field *ngIf="editMode" fieldType="TEXT" label="Title" name="title" [(value)]="recipe.title">
+            </app-field>
+        </div>
 
-        <b>Ingredients:</b>
-        <ul *ngFor="let ingredient of recipe.ingredients">
-            <li>
-                {{ingredient.amountOfMeasurement + MeasurementLabels[ingredient.measurement] + ' ' + ingredient.description}}
-            </li>
-        </ul>
+        <!-- Description -->
+        <div>
+            <p *ngIf="!editMode">
+                {{recipe.description}}
+            </p>
+            
+            <app-field *ngIf="editMode" fieldType="TEXT_AREA" label="Description" name="description" [(value)]="recipe.description">
+            </app-field>
+        </div>
 
+        <!-- Ingredients -->
+        <div class="flex-column">
+            <b>Ingredients:</b>
+
+            <ul *ngFor="let ingredient of recipe.ingredients">
+                <li>
+                    {{ingredient.amountOfMeasurement + MeasurementLabels[ingredient.measurement] + ' ' + ingredient.description}}
+                </li>
+            </ul>
+        </div>
+
+        <!-- Recipe Methods -->
         <b>Methods:</b>
         <ng-container *ngFor="let method of recipe.methods; index as i">
             <p>
