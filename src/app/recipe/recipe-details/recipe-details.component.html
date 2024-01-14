@@ -1,6 +1,7 @@
 <form> 
     <div class="width-100 recipe-detail-container">
         <app-button *ngIf="!editMode" icon="edit" (click)="startEditMode()"></app-button>
+        <app-button *ngIf="editMode" icon="close" (click)="endEditMode()"></app-button>
         
         <!-- Title -->
         <div>
