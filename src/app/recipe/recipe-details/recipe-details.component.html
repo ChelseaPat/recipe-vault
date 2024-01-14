@@ -1,16 +1,20 @@
 <form> 
     <div class="width-100 recipe-detail-container">
-        <app-button *ngIf="!editMode" icon="edit" (click)="startEditMode()"></app-button>
-        <app-button *ngIf="editMode" icon="close" (click)="endEditMode()"></app-button>
+        
         
         <!-- Title -->
-        <div>
+        <div class="width-100 flex-row content-spread">
             <h2 *ngIf="!editMode">
                 {{recipe.title}}
             </h2>
 
             <app-field *ngIf="editMode" fieldType="TEXT" label="Title" name="title" [(value)]="recipe.title">
             </app-field>
+            
+            <div>
+                <app-button *ngIf="!editMode" icon="edit" (click)="startEditMode()"></app-button>
+                <app-button *ngIf="editMode" icon="close" (click)="endEditMode()"></app-button>
+            </div>
         </div>
 
         <!-- Description -->
