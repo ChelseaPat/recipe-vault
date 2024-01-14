@@ -30,6 +30,10 @@ export class RecipeDetailsComponent implements OnInit {
 		this.editMode = true;
 	}
 
+	endEditMode(): void {
+		this.editMode = false;
+	}
+
 	onValueChange(value: string) {
 		console.log('Value changed:', value);
 	  }
