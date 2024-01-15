@@ -19,6 +19,7 @@
 // Light Gray: #F5F5F5
 body {
     background-color: #979797;
+    font-family: Arial, sans-serif;
 }
 
 .flex {
@@ -72,3 +73,21 @@ ul {
     margin:0; 
     padding: 0 0 0 20px;
 } 
+
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    resize: vertical;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  textarea:focus {
+    border-color: #007bff;
+    outline: none;
+  }

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Recipe, RecipeService } from '../recipe.service';
 
 @Component({
@@ -10,8 +10,7 @@ export class RecipeListComponent{
 
 	recipes: Recipe[] = [];
 	
-	constructor(
-		private recipeService: RecipeService) {
-			this.recipes = this.recipeService.recipes
-		 }
+	constructor(private recipeService: RecipeService) {
+		this.recipes = this.recipeService.recipes
+	}
 }
