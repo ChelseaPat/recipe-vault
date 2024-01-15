@@ -3,9 +3,9 @@ import { ActivatedRoute } from '@angular/router';
 import { Recipe, RecipeService } from 'src/app/recipe.service';
 
 @Component({
-  	selector: 'app-recipe-details',
-  	templateUrl: './recipe-details.component.html',
-  	styleUrls: ['./recipe-details.component.scss']
+    selector: 'app-recipe-details',
+    templateUrl: './recipe-details.component.html',
+    styleUrls: ['./recipe-details.component.scss']
 })
 export class RecipeDetailsComponent implements OnInit {
 
@@ -15,16 +15,16 @@ export class RecipeDetailsComponent implements OnInit {
 
 	MeasurementLabels = this.recipeService.MeasurementLabels;
 
-  	constructor(
+    constructor(
 		private route: ActivatedRoute,
 		private recipeService: RecipeService) {}
 
-  	ngOnInit (): void {
-    	this.id = this.route.snapshot.paramMap.get('id');
+    ngOnInit (): void {
+        this.id = this.route.snapshot.paramMap.get('id');
 		this.recipe = this.recipeService.getRecipeById(this.id);
 
 		this.editMode = this.id === 'new';
-  	}
+    }
 
 	startEditMode(): void {
 		this.editMode = true;
@@ -36,6 +36,5 @@ export class RecipeDetailsComponent implements OnInit {
 
 	onValueChange(value: string) {
 		console.log('Value changed:', value);
-	  }
-
+    }
 }
