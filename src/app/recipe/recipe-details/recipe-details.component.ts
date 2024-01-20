@@ -34,8 +34,7 @@ export class RecipeDetailsComponent implements OnInit {
             docType: 'RECIPE' 
         };
 
-        const boiii = this.editModeService.isAnEditSessionInProgress(this.editSession);
-        console.log('boi', boiii);
+        // const boiii = this.editModeService.isAnEditSessionInProgress(this.editSession);
     }
 
 	startEditMode(): void {
