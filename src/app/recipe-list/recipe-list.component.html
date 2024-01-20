@@ -1,6 +1,6 @@
 <div class="width-100">
     <div *ngFor="let recipe of recipes" class="recipe-container">
-        <a [routerLink]="['/recipe', recipe.id]"><h2>{{recipe.title}}</h2></a>
+        <a [routerLink]="['/recipe', recipe.id]"><h3>{{recipe.title}}</h3></a>
         <p>
             {{recipe.description}}
         </p>
