@@ -1,14 +1,14 @@
 textarea, input {
     width: 100%;
     padding: 2px;
-    margin: 0 8px 8px 0;
+    margin: 1px 8px 8px 0;
     box-sizing: border-box;
     background-color: #fff;
     resize: vertical;
     font-size: 16px;
     line-height: 1.5;
     border-radius: 4px;
-    border: 1px solid #ccc;
+    border: 1px solid var(--secondary-color);
     overflow: scroll;
     overflow: -moz-scrollbars-mnone;
     -ms-overflow-style: none;
@@ -24,6 +24,6 @@ textarea::-webkit-scrollbar {
 }
 
 textarea:focus, input:focus {
-    border: 2px solid var(--accent-color);
+    border: 2.5px solid var(--accent-color);
     outline: none;
 }
