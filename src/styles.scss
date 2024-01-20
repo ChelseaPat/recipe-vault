@@ -17,9 +17,19 @@
 // Background Color:
 
 // Light Gray: #F5F5F5
+:root {
+    --primary-color: #F9E7E7; //Lavender bush
+    --secondary-color: #98589c; // Finn
+    --primary-shade-color: #faf7f7; // chiense violet
+    --primary-shade-2-color: #69306D;
+    --accent-color: #6BBAEC; // Penn Blue
+    
+    --shadow-1: rgba(0, 0, 0, 0.2);
+    --text-1: rgb(5, 5, 5);
+}
 body {
-    background-color: #979797;
-    font-family: Arial, sans-serif;
+    background-color: var(--primary-color);
+    font-family: "Segoe UI Historic", "Segoe UI", Helvetica, Arial, sans-serif;
 }
 
 .flex {
@@ -56,17 +66,17 @@ body {
 
 a:link { 
     text-decoration: none; 
-    color: #6A5ACD;
+    color: var(--text-1);
 } 
 
 a:visited{
     text-decoration: none; 
-    color: #6A5ACD;
+    color: var(--text-1);
 }
 
 a:focus { 
     text-decoration: none; 
-    color:#FF6347; 
+    color: var(--accent-color);
 }
 
 ul {
