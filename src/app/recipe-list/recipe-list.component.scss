@@ -1,8 +1,11 @@
 .recipe-container {
-    background-color: #F5F5F5;
+    background-color: var(--primary-shade-color);
     padding: 10px;
     margin-bottom: 15px;
     border-radius: 5px;
+    color: var(--secondary-color);
+    box-shadow: 0 1px 2px var(--shadow-2);
+    font-weight: bold;;
 
     p {
         word-wrap: break-word;
