@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { EditModeService, EditSession } from 'src/app/common/edit-mode.service';
+import { EditModeService, EditSession } from 'src/app/core/edit-mode.service';
 import { Recipe, RecipeService } from 'src/app/recipe.service';
 
 @Component({
