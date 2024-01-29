@@ -11,10 +11,8 @@ type DocumentType = 'RECIPE';
     providedIn: 'root'
 })
 export class EditModeService {
-    asA: string = '';
-
     editSessions: EditSession[] = [];
-    sddasd: string = "";
+
     constructor() { }
 
     addAnEditSession(editSession: EditSession): void {
