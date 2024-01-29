@@ -2,8 +2,9 @@
     <div class="width-100 recipe-detail-container">
         
         
-        <!-- Title -->
+        <!-- Title & Action buttons -->
         <div class="width-100 flex-row content-spread">
+            <!-- Title -->
             <h2 *ngIf="!editMode">
                 {{recipe.title}}
             </h2>
@@ -11,6 +12,7 @@
             <app-field *ngIf="editMode" fieldType="TEXT" label="Title" name="title" [(value)]="recipe.title">
             </app-field>
             
+            <!-- Action buttons -->
             <div>
                 <app-button *ngIf="!editMode" icon="edit" (click)="startEditMode()"></app-button>
                 <app-button *ngIf="editMode" icon="save" (click)="cancelEditMode()"></app-button>
@@ -18,7 +20,7 @@
             </div>
         </div>
 
-        <!-- Description -->
+        <!-- Recipe description -->
         <div>
             <p *ngIf="!editMode">
                 {{recipe.description}}

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { EditModeService, EditSession } from 'src/app/core/edit-mode.service';
+import { EditSession } from 'src/app/core/edit-mode.service';
 import { Recipe, RecipeService } from 'src/app/recipe.service';
 
 @Component({
@@ -20,8 +20,7 @@ export class RecipeDetailsComponent implements OnInit {
     constructor(
         public router: Router,
 		private route: ActivatedRoute,
-		private recipeService: RecipeService,
-        private editModeService: EditModeService) {}
+		private recipeService: RecipeService) {}
 
     ngOnInit (): void {
         this.id = this.route.snapshot.paramMap.get('id');
