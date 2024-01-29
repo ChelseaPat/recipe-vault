@@ -1,0 +1,14 @@
+div.top-bar {
+    background-color: var(--primary-shade-color) !important;
+    margin-bottom: 10px;
+    box-shadow: 0 1px 2px var(--shadow-1);
+}
+
+.logo-img {
+    padding-left: 10px;
+}
+
+.header-button {
+    display: grid;
+    place-items: center;
+}
